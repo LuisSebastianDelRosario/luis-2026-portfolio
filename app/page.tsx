@@ -4,6 +4,8 @@ import WorkExperiences from "@/components/sections/WorkExperiences";
 import Education from "@/components/sections/Education";
 import Leadership from "@/components/sections/Leadership";
 import Certifications from "@/components/sections/Certifications";
+import Contact from "@/components/sections/Contact";
+import Footer from "@/components/sections/Footer";
 
 export default function Home() {
   return (
@@ -15,6 +17,8 @@ export default function Home() {
         <Education />
         <Leadership />
         <Certifications />
+        <Contact />
+        <Footer />
       </div>
     </main>
   );
