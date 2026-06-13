@@ -1,11 +1,12 @@
 import Navbar from "@/components/sections/Navbar";
+import Hero from "@/components/sections/Hero";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#0f0f0f] text-white">
+    <main style={{ minHeight: "100vh", backgroundColor: "#0f0f0f", color: "#ffffff" }}>
       <Navbar />
-      <div className="pt-24 px-8 max-w-3xl mx-auto">
-        <p className="text-white">Hero section coming soon...</p>
+      <div style={{ maxWidth: "768px", margin: "0 auto", paddingLeft: "64px", paddingRight: "32px" }}>
+        <Hero />
       </div>
     </main>
   );

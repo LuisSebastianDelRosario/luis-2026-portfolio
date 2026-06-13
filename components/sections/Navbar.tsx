@@ -11,7 +11,7 @@ const navLinks = [
 export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#0f0f0f]">
-      <div className="max-w-3xl mx-auto px-8 py-6 flex items-center gap-8">
+      <div style={{ paddingLeft: "64px", paddingTop: "24px", paddingBottom: "24px", display: "flex", gap: "32px" }}>
         {navLinks.map((link) => (
           <Link
             key={link.label}
