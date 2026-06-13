@@ -1,6 +1,7 @@
 import Navbar from "@/components/sections/Navbar";
 import Hero from "@/components/sections/Hero";
 import WorkExperiences from "@/components/sections/WorkExperiences";
+import Education from "@/components/sections/Education";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <div style={{ maxWidth: "768px", margin: "0 auto", paddingLeft: "64px", paddingRight: "32px" }}>
         <Hero />
         <WorkExperiences />
+        <Education />
       </div>
     </main>
   );

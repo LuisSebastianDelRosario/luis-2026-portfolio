@@ -18,28 +18,16 @@ const experiences = [
 
 export default function WorkExperiences() {
   return (
-    <section id="experiences" className="py-16">
-      {/* Section Title */}
-      <h2 className="text-xl font-semibold text-white mb-8">
+    <section id="experiences" style={{ paddingTop: "80px", paddingBottom: "80px", borderTop: "1px solid rgba(255,255,255,0.1)", marginTop: "40px" }}>
+      <h2 style={{ fontSize: "20px", fontWeight: "600", color: "#ffffff", marginBottom: "40px" }}>
         Work Experiences
       </h2>
-
-      {/* Experience Entries */}
-      <div className="flex flex-col gap-8">
+      <div style={{ display: "flex", flexDirection: "column", gap: "40px" }}>
         {experiences.map((exp, index) => (
-          <div key={index} className="flex flex-col gap-1">
-            {/* Date */}
-            <p className="text-[13px] text-white/50">
-              {exp.date}
-            </p>
-            {/* Job Title */}
-            <p className="text-[15px] font-semibold text-white">
-              {exp.title}
-            </p>
-            {/* Company */}
-            <p className="text-[13px] text-white/40">
-              {exp.company}
-            </p>
+          <div key={index} style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+            <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.5)" }}>{exp.date}</p>
+            <p style={{ fontSize: "15px", fontWeight: "600", color: "#ffffff" }}>{exp.title}</p>
+            <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.4)" }}>{exp.company}</p>
           </div>
         ))}
       </div>
