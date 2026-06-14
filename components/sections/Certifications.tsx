@@ -35,7 +35,7 @@ export default function Certifications() {
       {/* Section Title */}
       <h2
         style={{
-          fontSize: "20px",
+          fontSize: "25px",
           fontWeight: "600",
           color: "#ffffff",
           marginBottom: "40px",
@@ -55,7 +55,7 @@ export default function Certifications() {
             <p
               style={{
                 fontSize: "15px",
-                fontWeight: "600",
+                fontWeight: "450",
                 color: "#ffffff",
               }}
             >

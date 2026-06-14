@@ -27,7 +27,7 @@ export default function Leadership() {
       {/* Section Title */}
       <h2
         style={{
-          fontSize: "20px",
+          fontSize: "25px",
           fontWeight: "600",
           color: "#ffffff",
           marginBottom: "40px",
@@ -47,7 +47,7 @@ export default function Leadership() {
             <p
               style={{
                 fontSize: "15px",
-                fontWeight: "600",
+                fontWeight: "450",
                 color: "#ffffff",
               }}
             >
