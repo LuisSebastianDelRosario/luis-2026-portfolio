@@ -8,6 +8,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 body {
@@ -27,6 +28,3 @@ body {
   color: #ffffff;
 }
 
-section[id] {
-  scroll-margin-top: 80px;
-}

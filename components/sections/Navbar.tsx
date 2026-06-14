@@ -14,25 +14,29 @@ export default function Navbar() {
 
   return (
     <nav style={{
-  position: "fixed",
-  top: 0,
-  left: 0,
-  width: "100%",
-  zIndex: 50,
-  backgroundColor: "rgba(0, 0, 0, 0.25)",
-  backdropFilter: "blur(12px)",
-  WebkitBackdropFilter: "blur(12px)",
-}}>
-      <div style={{
-        maxWidth: "768px",
-        margin: "0 auto",
-        paddingLeft: "64px",
-        paddingRight: "32px",
-        paddingTop: "24px",
-        paddingBottom: "24px",
-        display: "flex",
-        gap: "32px",
-      }}>
+      position: "fixed",
+      top: 0,
+      left: 0,
+      width: "100%",
+      zIndex: 50,
+      backgroundColor: "rgba(0, 0, 0, 0.25)",
+      backdropFilter: "blur(12px)",
+      WebkitBackdropFilter: "blur(12px)",
+    }}>
+      {/* 1. Added className="responsive-nav-layout" and kept your exact desktop style */}
+      <div 
+        className="responsive-nav-layout"
+        style={{
+          maxWidth: "768px",
+          margin: "0 auto",
+          paddingLeft: "64px",
+          paddingRight: "32px",
+          paddingTop: "24px",
+          paddingBottom: "24px",
+          display: "flex",
+          gap: "32px",
+        }}
+      >
         {navLinks.map((link) => (
           <Link
             key={link.label}
@@ -52,6 +56,17 @@ export default function Navbar() {
           </Link>
         ))}
       </div>
+
+      {/* 2. Overrides the asymmetric desktop padding to a clean, even 24px on phones */}
+      <style dangerouslySetInnerHTML={{__html: `
+        @media (max-width: 767px) {
+          .responsive-nav-layout {
+            padding-left: 24px !important;
+            padding-right: 24px !important;
+            gap: 24px !important; /* Slightly tightens link spacing on mobile so it fits gracefully */
+          }
+        }
+      `}} />
     </nav>
   );
 }
