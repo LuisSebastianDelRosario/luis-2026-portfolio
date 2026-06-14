@@ -1,7 +1,7 @@
 const certifications = [
   {
     name: "Atlassian Agile Project Management: Professional Certificate",
-    issuer: "Atlassian (Feb 2025)",
+    issuer: "Atlassian (Feb 2026)",
   },
   {
     name: "Lean Six Sigma: White Belt Certification",
@@ -16,7 +16,7 @@ const certifications = [
     issuer: "Project Management Institute (Jul 2025)",
   },
   {
-    name: "Complete Data Science",
+    name: "Complete Data Science Bootcamp",
     issuer: "365 Careers (Jul 2025)",
   },
 ];
