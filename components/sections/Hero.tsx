@@ -62,10 +62,9 @@ export default function Hero() {
           lineHeight: "1.7",
         }}>
           As a former Executive Assistant to a CEO and 5 different Executives in
-          a Big 4 Audit Firm, I&apos;ve honed my skills in leading teams and
-          optimizing operations. I have experience in system analysis, data
-          analysis, and data-driven decision-making, using tools like Python,
-          Excel, and Tableau.
+          PwC Canada, I&apos;ve honed my skills in leading teams and
+          optimizing operations. I also have experience in system analysis, data
+          analysis, agile methodology, software development, and AI enablement.
         </p>
         <p style={{
           fontSize: "15px",

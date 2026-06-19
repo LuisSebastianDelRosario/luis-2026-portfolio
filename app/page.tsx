@@ -4,6 +4,7 @@ import WorkExperiences from "@/components/sections/WorkExperiences";
 import Education from "@/components/sections/Education";
 import Leadership from "@/components/sections/Leadership";
 import Certifications from "@/components/sections/Certifications";
+import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
 import FadeIn from "@/components/FadeIn";
@@ -13,9 +14,8 @@ export default function Home() {
     <main style={{ minHeight: "100vh", backgroundColor: "#000000", color: "#ffffff" }}>
       <Navbar />
       
-      {/* 1. Restored your exact original desktop inline styles, just added a className */}
-      <div 
-        className="responsive-content-layout" 
+      <div
+        className="responsive-content-layout"
         style={{ maxWidth: "768px", margin: "0 auto", paddingLeft: "64px", paddingRight: "32px" }}
       >
         <Hero />
@@ -35,6 +35,10 @@ export default function Home() {
         <FadeIn delay={0.1}>
           <Certifications />
         </FadeIn>
+
+        <FadeIn delay={0.1}>
+          <Projects />
+        </FadeIn>
         
         <FadeIn delay={0.1}>
           <Contact />
@@ -45,7 +49,6 @@ export default function Home() {
         </FadeIn>
       </div>
 
-      {/* 2. This completely isolated block overrides only mobile views, leaving desktop untouched */}
       <style dangerouslySetInnerHTML={{__html: `
         @media (max-width: 767px) {
           .responsive-content-layout {
