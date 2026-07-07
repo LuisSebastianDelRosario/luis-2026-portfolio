@@ -1,14 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const projects = [
   {
-    name: "eStoic (TBA) ↗",
-    description:
-      "Web app that brings The Daily Stoic by Ryan Holiday to your browser. Displays the meditation, quote, and reflection that matches today's exact date. Created for free, because everyone deserves to learn philosophy for free.",
-    image: null,
-    link: "#",
+    name: "eStoic ↗",
+    description: "Web app that brings The Daily Stoic by Ryan Holiday to your browser. Displays the meditation, quote, and reflection that matches today's exact date. Created for free, because everyone deserves to learn philosophy for free.",
+    image: "/estoic.png",
+    link: "https://estoic.vercel.app/",
   },
 ];
 
@@ -38,8 +38,11 @@ export default function Projects() {
 
       <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
         {projects.map((project, index) => (
-          <div
+          <a
             key={index}
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
             style={{
@@ -57,10 +60,28 @@ export default function Projects() {
               backdropFilter: hoveredIndex === index ? "blur(8px)" : "none",
               transition: "all 0.3s ease",
               cursor: "pointer",
+              textDecoration: "none",
             }}
           >
-            {/* Image Placeholder */}
-            <div style={{ width: "120px", height: "80px", flexShrink: 0, backgroundColor: "rgba(255,255,255,0.08)", borderRadius: "8px", border: "1px solid rgba(255,255,255,0.1)" }} />
+            {/* Project Image */}
+            <div
+              style={{
+                width: "120px",
+                height: "80px",
+                flexShrink: 0,
+                position: "relative",
+                borderRadius: "8px",
+                overflow: "hidden",
+                border: "1px solid rgba(255,255,255,0.1)",
+              }}
+            >
+              <Image
+                src={project.image}
+                alt={project.name}
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </div>
 
             {/* Text Content */}
             <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
@@ -71,8 +92,7 @@ export default function Projects() {
                 {project.description}
               </p>
             </div>
-
-          </div>
+          </a>
         ))}
       </div>
     </section>
